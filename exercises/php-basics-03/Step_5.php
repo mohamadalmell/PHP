@@ -1,8 +1,18 @@
 <?php
-for ($i=1; $i <= 5 ; $i++) { 
-    echo str_repeat("*", $i)."\n";
+function star($n){
+    for ($i=1; $i <=$n ; $i++) { 
+        for ($j=1; $j <= $i ; $j++) { 
+            echo "*";
+        }
+        echo "\n";
+    }
+    for ($i=$n; $i >=1 ; $i--) { 
+        for ($j=1; $j <= $i ; $j++) { 
+            echo "*";
+        }
+        echo "\n";
+    }
 }
-for ($j=5; $j >=1 ; $j--) { 
-    echo str_repeat("*", $j)."\n";
-}
+
+print star(5);
 ?>
